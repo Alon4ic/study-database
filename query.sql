@@ -1,3 +1,73 @@
+
+
+--task3
+SELECT color, count(color) AS car_color FROM cars
+    WHERE sold IS FALSE
+    GROUP BY color
+        HAVING count(color) > 2
+    ORDER BY count(color) DESC
+
+
+-- --task2
+-- SELECT brand, model, year FROM cars
+--   WHERE sold IS FALSE
+--   ORDER BY year
+--   LIMIT 5;
+
+-- --task
+-- SELECT year, count(year) AS car_count,
+--     MAX(price),
+--     MIN(price)
+--     FROM cars
+--     WHERE sold IS TRUE
+--     GROUP BY year
+--     HAVING count(year) > 1
+--     ORDER BY car_count;
+
+
+
+-- -- Usage HAVING
+-- SELECT brand, count(brand), FLOOR(AVG(price)) AS AVG
+--     FROM cars
+--     WHERE sold IS FALSE
+--     GROUP BY brand
+--     HAVING count(brand) > 1;
+
+
+
+-- --task
+-- SELECT 
+--     brand,
+--     COUNT(*) AS count_brand,
+--    CEIL(AVG(price)) AS average
+-- FROM cars
+-- WHERE sold IS FALSE
+--     GROUP BY brand
+
+-- -- Usage GROUP BY
+-- SELECT condition, count(condition) AS condition_count FROM cars
+--     GROUP BY condition;
+
+
+
+
+-- -- task2
+-- SELECT
+--     CEIL(AVG(price)) AS avg,
+--     MIN(price),
+--     MAX(price)
+-- FROM cars
+--     WHERE sold IS TRUE;
+-- --task1
+-- SELECT FLOOR(AVG(price)) AS average FROM cars
+--     WHERE brand = 'Bentley';
+
+-- -- MAX, MIN and AVG
+-- SELECT MAX(price) AS most_expensive FROM cars
+--     WHERE sold IS TRUE;
+
+
+
 -- --task
 -- SELECT SUM(price) AS total_earnings FROM cars
 --     WHERE sold IS TRUE;
