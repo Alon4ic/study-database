@@ -1,12 +1,62 @@
+--MANIPULATION DATA
+--DELETE
+--task
+DELETE FROM cars
+    WHERE sold IS TRUE;
+    
+-- DELETE FROM cars
+--     WHERE condition = 0;
 
 
---task3
-SELECT color, count(color) AS car_color FROM cars
-    WHERE sold IS FALSE
-    GROUP BY color
-        HAVING count(color) > 2
-    ORDER BY count(color) DESC
 
+
+--UPDATE
+-- --task2
+-- UPDATE cars SET price = 10000, condition = 1
+--     WHERE brand = 'Porsche'
+--         AND sold IS FALSE;
+
+-- -- task
+-- UPDATE cars SET price = 465000, condition = 5
+--     WHERE Id = 14 
+    -- brand = 'Aston Martin'
+    --    AND model = 'DB4'
+    -- AND color = 'green'
+
+-- UPDATE cars SET sold = TRUE
+-- WHERE brand = 'Ford'
+--   AND model = 'Escort RS2000';
+
+
+
+
+-- --TASK2
+-- INSERT INTO cars (
+--     brand, model, year, price, color, condition, sold
+-- ) VALUES (
+--     'Chevrolet', 'Bel Air', 1955, 50000, 'purple', 5, FALSE
+-- ), (
+--     'Porsche', '944 Turbo', 1986, 48000, 'white', 4, FALSE
+-- );
+
+-- --INSERT INTO
+-- INSERT INTO cars (
+--     brand, model, year, price, color, condition, sold
+-- ) VALUES (
+--     'Ford', 'Escort RS2000', 1978, 39000, 'blue', 4, FALSE
+-- ), (
+--     'Aston Martin', 'VS Vantage', 1977, 145000, 'dark green', 5, FALSE
+-- );
+
+
+
+--//////==========///////==========//////////
+-- --task3
+-- SELECT color, count(color) AS car_color FROM cars
+--     WHERE sold IS FALSE
+--     GROUP BY color
+--         HAVING count(color) > 2
+--     ORDER BY count(color) DESC
 
 -- --task2
 -- SELECT brand, model, year FROM cars
@@ -215,7 +265,7 @@ SELECT color, count(color) AS car_color FROM cars
 -- SELECT brand, model, condition, price FROM cars
 --     WHERE price < 50000;
 
-
+--
 -- SELECT brand, model, condition, price FROM cars
 --     WHERE condition >= 3;
 -- --     //or
